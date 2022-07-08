@@ -1,0 +1,114 @@
+<div>
+  <button pButton label="Hola" icon="pi pi-user" (click)="traeInformacion()">
+    has click
+  </button>
+</div>
+
+<p-carousel
+  [value]="carrouselPages"
+  [numVisible]="1"
+  [numScroll]="1"
+  (onPage)="ver($event)"
+  [showNavigators]="true"
+>
+  <ng-template pTemplate="item" let-i="index">
+    <div class="Contenedor" *ngIf="openandclose">
+      <app-barras-estadisticas
+        *ngIf="page"
+        class="contenedor__barras"
+      ></app-barras-estadisticas>
+      <div class="contenedor__tabla">
+        <p-table
+          responsiveLayout="scroll"
+          scrollHeight="500px"
+          class="card__table"
+          [value]="valores"
+          sortField="Area.name"
+          sortMode="single"
+          dataKey="Area.name"
+          rowGroupMode="subheader"
+          groupRowsBy="Area.name"
+          *ngIf="!page"
+          [paginator]="true"
+          [rows]="1"
+          [rowsPerPageOptions]="[5, 10, 15, 20]"
+          [totalRecords]="valores.length"
+          [pageLinks]="3"
+        >
+          <ng-template pTemplate="header">
+            <tr>
+              <th class="header__codigo header__item">Codigo</th>
+              <th class="header__item">Descripción</th>
+              <th class="header__item">Cantidad</th>
+              <th class="header__item">Valor Unitario</th>
+              <th class="header__vaalorTotal header__item">Valor Total</th>
+            </tr>
+          </ng-template>
+          <ng-template
+            pTemplate="groupheader"
+            let-valor
+            let-rowIndex="rowIndex"
+            let-expanded="expanded"
+          >
+            <tr>
+              <td colspan="5">
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  [pRowToggler]="valor"
+                  class="p-button-text p-button-rounded p-button-plain mr-2"
+                  [icon]="
+                    expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'
+                  "
+                ></button>
+                <div class="contenedor__icono">
+                  <i
+                    [class]="valor.Area.icon"
+                    [style.color]="valor.Area.color"
+                  ></i>
+                </div>
+                <span class="font-bold ml-2" style="margin: 13px"
+                  >{{ valor.Area.name }}
+                </span>
+                <span>${{ valor.valortotal }}</span>
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="groupfooter" let-valor>
+            <tr class="p-rowgroup-footer">
+              <td colspan="4" style="text-align: right"></td>
+              <td></td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="rowexpansion" let-valor>
+            <tr>
+              <td>
+                <span class="image-text">{{ valor.codigo }}</span>
+              </td>
+              <td>
+                {{ valor.Descripcion }}
+              </td>
+              <td>
+                {{ valor.cantidad }}
+              </td>
+              <td>
+                <span>{{ valor?.valorunitario }}</span>
+              </td>
+              <td>
+                {{ valor?.valortotal }}
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+        <div class="prueba" *ngIf="!page">
+          <label class="prueba2"> Valor Total:</label>
+          <span class="prueba3"
+            >$2.351.260
+            <!-- {{ calculatevalorTotal(valor?.area?.name) }} -->
+          </span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

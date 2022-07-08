@@ -1,0 +1,145 @@
+{
+
+    "data":[
+       {
+          "codigo":1100,
+          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+          "cantidad": 2,
+          "valorunitario": 235.125,
+          "valortotal": 470.252,
+          "Area": {
+            "name": "Estancia",
+            "icon": "fa-solid fa-user-clock ",
+            "color": "#5C9BFF"
+
+          }
+       },
+       {
+         "codigo":1200,
+          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+          "cantidad": 2,
+          "valorunitario": 235.125,
+          "valortotal": 470.252,
+          "Area": {
+            "name": "Oxigeno",
+            "icon": "fa-solid fa-soap",
+            "color": "#FAD64D"
+          }
+       },
+       {
+         "codigo":1300,
+          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+          "cantidad": 2,
+          "valorunitario": 235.125,
+          "valortotal": 470.252,
+          "Area": {
+            "name": "Examenes",
+            "icon": "fa-solid fa-clipboard-list",
+            "color": "#9048D9"
+          }
+       },
+       {
+         "codigo":1400,
+          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+          "cantidad": 2,
+          "valorunitario": 235.125,
+          "valortotal": 470.252,
+          "Area": {
+            "name":"Medicamentos",
+            "icon": "fa-solid fa-pills",
+            "color": "#D98248"
+          }
+       },
+       {
+         "codigo":1500,
+          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+          "cantidad": 2,
+          "valorunitario": 235.125,
+          "valortotal": 470.252,
+          "Area": {
+            "name":"Insumos",
+            "icon": "fa-solid fa-boxes-packing",
+            "color":"#F05B83"
+          }
+       },
+       {
+         "codigo":1510,
+          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+          "cantidad": 2,
+          "valorunitario": 235.125,
+          "valortotal": 470.252,
+          "Area": {
+            "name":"Insumos",
+            "icon": "fa-solid fa-boxes-packing"
+          }
+       },
+       {
+         "codigo":10701,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 3,
+         "valorunitario": 235.125,
+         "valortotal": 470.252,
+         "Area": {
+           "name": "Estancia",
+           "icon": "fa-solid fa-user-clock"
+         }
+      },
+      {
+        "codigo":1200,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 2,
+         "valorunitario": 235.125,
+         "valortotal": 470.252,
+         "Area": {
+           "name": "Oxigeno",
+           "icon": "fa-solid fa-soap"
+         }
+      },
+      {
+        "codigo":1300,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 2,
+         "valorunitario": 235.126,
+         "valortotal": 470.252,
+         "Area": {
+           "name": "Examenes",
+           "icon": "fa-solid fa-clipboard-list"
+         }
+      },
+      {
+        "codigo":1400,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 2,
+         "valorunitario": 235.125,
+         "valortotal": 470.252,
+         "Area": {
+           "name":"Medicamentos",
+           "icon": "fa-solid fa-pills"
+         }
+      },
+      {
+        "codigo":1500,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 2,
+         "valorunitario": 235.125,
+         "valortotal": 470.252,
+         "Area": {
+           "name":"Insumos",
+           "icon": "fa-solid fa-boxes-packing"
+         }
+      },
+      {
+        "codigo":1510,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 2,
+         "valorunitario": 235.125,
+         "valortotal": 470.252,
+         "Area": {
+           "name":"Insumos",
+           "icon": "fa-solid fa-boxes-packing"
+         }
+      }
+      ]
+   }
+       
+      
