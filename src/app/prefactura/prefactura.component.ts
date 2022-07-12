@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicediseñoService } from '../service/servicediseño.service';
-import { IarregloInformacion } from '../interface/interfacediseño';
+import {
+  IarregloInformacion,
+  IdataTable,
+  Area,
+} from '../interface/interfacediseño';
 
 @Component({
   selector: 'app-prefactura',
@@ -11,7 +15,8 @@ export class PrefacturaComponent implements OnInit {
   page: boolean = false;
   valores: IarregloInformacion[] = [];
   openandclose: boolean = false;
-  carrouselPages: IarregloInformacion[] = [];
+  carrouselPages: number[] = [];
+  arrayTable: any[] = [];
 
   constructor(private servicediseñoservice: ServicediseñoService) {}
 
@@ -20,7 +25,6 @@ export class PrefacturaComponent implements OnInit {
       .getDataInformacion()
       .subscribe((resp: IarregloInformacion[]) => {
         this.valores = resp;
-        console.log('ku', resp);
       });
     this.traeInformacion();
   }
@@ -28,11 +32,10 @@ export class PrefacturaComponent implements OnInit {
   traeInformacion() {
     this.servicediseñoservice.getDataInformacion().subscribe((resp) => {
       this.valores = resp;
-      this.carrouselPages = [{}, {}];
-      console.log('holis', this.valores);
+      this.carrouselPages = [1, 1];
+      this.transformResponse(resp);
     });
     this.openandclose = true;
-    console.log('hh', this.openandclose);
   }
 
   // calculatevalorTotal(name: string) {
@@ -49,7 +52,36 @@ export class PrefacturaComponent implements OnInit {
   //   return total;
   // }
 
+  transformResponse(arr: IarregloInformacion[]): IdataTable {
+    let obj: any = {};
+    arr.forEach((res: IarregloInformacion) => {
+      !obj[res.Area.name]
+        ? (obj[res.Area.name] = [])
+        : obj[res.Area.name].push(res);
+    });
+    return obj;
+  }
+
   ver(event: any) {
     this.page = !this.page;
+  }
+
+  transformDataToArray(event: any) {
+    const dataInformacionTable = this.transformResponse(this.valores);
+    const keyObject = [
+      'Estancia',
+      'Examenes',
+      'Insumos',
+      'Medicamentos',
+      'Oxigeno',
+    ];
+    const filteredUsers = Object.keys(dataInformacionTable)
+      .filter((key) => event.Area.includes(key))
+      .reduce((obj, key) => {
+        debugger;
+        // obj[key] = users[key];
+        return obj;
+      }, {});
+    return [];
   }
 }

@@ -3,7 +3,7 @@ export interface IdataInformacion<T> {
 }
 
 export interface Area {
-  name?: string;
+  name: string;
 }
 
 export interface IarregloInformacion {
@@ -14,5 +14,13 @@ export interface IarregloInformacion {
   valortotal?: number;
   icon?: string;
   color?: string;
-  area?: Area;
+  Area: Area;
+}
+
+export interface IdataTable {
+  Estancia: IarregloInformacion[];
+  Examenes: IarregloInformacion[];
+  Insumos: IarregloInformacion[];
+  Medicamentos: IarregloInformacion[];
+  Oxigeno: IarregloInformacion[];
 }
