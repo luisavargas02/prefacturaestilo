@@ -29,19 +29,16 @@
           rowGroupMode="subheader"
           groupRowsBy="Area.name"
           *ngIf="!page"
-          [paginator]="true"
-          [rows]="1"
-          [rowsPerPageOptions]="[5, 10, 15, 20]"
-          [totalRecords]="valores.length"
-          [pageLinks]="3"
         >
           <ng-template pTemplate="header">
             <tr>
-              <th class="header__codigo header__item">Codigo</th>
-              <th class="header__item">Descripción</th>
-              <th class="header__item">Cantidad</th>
-              <th class="header__item">Valor Unitario</th>
-              <th class="header__vaalorTotal header__item">Valor Total</th>
+              <th colspan="1" class="header__codigo header__item">Codigo</th>
+              <th colspan="2" class="header__item">Descripción</th>
+              <th colspan="1" class="header__item">Cantidad</th>
+              <th colspan="1" class="header__item">Valor Unitario</th>
+              <th colspan="2" class="header__vaalorTotal header__item">
+                Valor Total
+              </th>
             </tr>
           </ng-template>
           <ng-template
@@ -62,7 +59,7 @@
                     expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'
                   "
                 ></button>
-                <div class="contenedor__icono">
+                <div class="contenedor__icono" style="margin-left: 10px">
                   <i
                     [class]="valor.Area.icon"
                     [style.color]="valor.Area.color"
@@ -71,39 +68,50 @@
                 <span class="font-bold ml-2" style="margin: 13px"
                   >{{ valor.Area.name }}
                 </span>
-                <span>${{ valor.valortotal }}</span>
+              </td>
+              <td style="text-align: end">
+                <div
+                  class="contenedorprecio"
+                  [style.background]="valor.Area.color"
+                >
+                  <small
+                    [style.color]="valor.Area.colorletras"
+                    class="contenedorprecio__totales"
+                    >${{ valor.valortotal }}</small
+                  >
+                </div>
               </td>
             </tr>
           </ng-template>
           <ng-template pTemplate="groupfooter" let-valor>
             <tr class="p-rowgroup-footer">
-              <td colspan="4" style="text-align: right"></td>
+              <td></td>
               <td></td>
             </tr>
           </ng-template>
           <ng-template pTemplate="rowexpansion" let-valor>
             <tr>
-              <td>
+              <td colspan="1" class="tdespacio">
                 <span class="image-text">{{ valor.codigo }}</span>
               </td>
-              <td>
+              <td colspan="2" class="tdespacio">
                 {{ valor.Descripcion }}
               </td>
-              <td>
+              <td colspan="1" class="tdespacio">
                 {{ valor.cantidad }}
               </td>
-              <td>
+              <td colspan="1" class="tdespacio">
                 <span>{{ valor?.valorunitario }}</span>
               </td>
-              <td>
+              <td colspan="2" class="tdespacio">
                 {{ valor?.valortotal }}
               </td>
             </tr>
           </ng-template>
         </p-table>
-        <div class="prueba" *ngIf="!page">
-          <label class="prueba2"> Valor Total:</label>
-          <span class="prueba3"
+        <div class="contenedor__valortotal" *ngIf="!page">
+          <label class="valortotal__title"> Valor Total:</label>
+          <span class="valortotal__number"
             >$2.351.260
             <!-- {{ calculatevalorTotal(valor?.area?.name) }} -->
           </span>

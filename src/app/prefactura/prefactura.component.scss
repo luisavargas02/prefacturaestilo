@@ -1,6 +1,7 @@
 .Contenedor {
-  width: 70%;
-  max-height: 800px;
+  width: 961px;
+  max-width: 970px;
+  max-height: 755px;
   min-height: 500px;
   border: 1px solid rgb(85 149 255 / 72%);
   border-radius: 20px;
@@ -26,12 +27,10 @@
   position: relative;
 }
 .header__codigo {
-  // border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
 .header__vaalorTotal {
   border-top-right-radius: 5px;
-  // border-bottom-right-radius: 5px;
 }
 
 :host ::ng-deep {
@@ -109,14 +108,14 @@
   }
 }
 
-.prueba {
+.contenedor__valortotal {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #dee2e6;
   background-color: #f4f6ff;
 }
-.prueba2 {
+.valortotal__title {
   color: black;
   font-weight: bold;
 }
@@ -128,4 +127,15 @@
   height: 30px;
   margin-left: 6px;
   text-align: center;
+}
+.tdespacio {
+  text-align: end;
+}
+.contenedorprecio {
+  padding: 6px;
+  border-radius: 7px;
+  text-align: center;
+}
+.contenedorprecio__totales {
+  font-weight: bold;
 }

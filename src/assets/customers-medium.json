@@ -10,7 +10,8 @@
           "Area": {
             "name": "Estancia",
             "icon": "fa-solid fa-user-clock ",
-            "color": "#5C9BFF"
+            "color": "#5C9BFF",
+            "colorletras": ""
 
           }
        },
@@ -23,7 +24,8 @@
           "Area": {
             "name": "Oxigeno",
             "icon": "fa-solid fa-soap",
-            "color": "#FAD64D"
+            "color": "#FAD64D",
+            "colorletras":"#87732A"
           }
        },
        {
@@ -35,7 +37,8 @@
           "Area": {
             "name": "Examenes",
             "icon": "fa-solid fa-clipboard-list",
-            "color": "#9048D9"
+            "color": "#9048D9",
+            "colorletras": "#48236B"
           }
        },
        {
@@ -47,7 +50,8 @@
           "Area": {
             "name":"Medicamentos",
             "icon": "fa-solid fa-pills",
-            "color": "#D98248"
+            "color": "#D98248",
+            "colorletras":"#6B4023"
           }
        },
        {
@@ -59,7 +63,8 @@
           "Area": {
             "name":"Insumos",
             "icon": "fa-solid fa-boxes-packing",
-            "color":"#F05B83"
+            "color":"#F05B83",
+            "colorletras":"#823147"
           }
        },
        {
