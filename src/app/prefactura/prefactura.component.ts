@@ -12,19 +12,80 @@ import {
   styleUrls: ['./prefactura.component.scss'],
 })
 export class PrefacturaComponent implements OnInit {
+  customers: any[] = [];
+
+  representatives: any[] = [];
+
+  statuses: any[] = [];
+
+  loading: boolean = true;
+
+  activityValues: number[] = [0, 100];
+
   page: boolean = false;
   valores: IarregloInformacion[] = [];
   openandclose: boolean = false;
   carrouselPages: number[] = [];
   arrayTable: any[] = [];
-
+  arrayKeys: any[] = [
+    {
+      path: 'Estancia',
+      visible: false,
+      icon: '',
+      iconColor: '',
+      textColor: '',
+      valorTotal: 0,
+    },
+    {
+      path: 'Examenes',
+      visible: false,
+      icon: '',
+      iconColor: '',
+      textColor: '',
+      valorTotal: 0,
+    },
+    {
+      path: 'Insumos',
+      visible: false,
+      icon: '',
+      iconColor: '',
+      textColor: '',
+      valorTotal: 0,
+    },
+    {
+      path: 'Medicamentos',
+      visible: false,
+      icon: '',
+      iconColor: '',
+      textColor: '',
+      valorTotal: 0,
+    },
+    {
+      path: 'Oxigeno',
+      visible: false,
+      icon: '',
+      iconColor: '',
+      textColor: '',
+      valorTotal: 0,
+    },
+  ];
+  tableDetails: any[] = [];
   constructor(private servicediseñoservice: ServicediseñoService) {}
-
   ngOnInit(): void {
     this.servicediseñoservice
       .getDataInformacion()
       .subscribe((resp: IarregloInformacion[]) => {
         this.valores = resp;
+        this.valores.forEach((responseTable, index) => {
+          this.arrayKeys.forEach((response, index) => {
+            if (responseTable.Area.name === response.path) {
+              response.icon = responseTable?.Area.icon;
+              response.iconColor = responseTable?.Area?.color;
+              response.textColor = responseTable.Area.colorletras;
+              response.valorTotal = responseTable.valortotal;
+            }
+          });
+        });
       });
     this.traeInformacion();
   }
@@ -37,20 +98,6 @@ export class PrefacturaComponent implements OnInit {
     });
     this.openandclose = true;
   }
-
-  // calculatevalorTotal(name: string) {
-  //   let total = 0;
-
-  //   if (this.valores) {
-  //     for (let valor of this.valores) {
-  //       if (valor.data === name) {
-  //         total++;
-  //       }
-  //     }
-  //   }
-
-  //   return total;
-  // }
 
   transformResponse(arr: IarregloInformacion[]): IdataTable {
     let obj: any = {};
@@ -66,22 +113,14 @@ export class PrefacturaComponent implements OnInit {
     this.page = !this.page;
   }
 
-  transformDataToArray(event: any) {
-    const dataInformacionTable = this.transformResponse(this.valores);
-    const keyObject = [
-      'Estancia',
-      'Examenes',
-      'Insumos',
-      'Medicamentos',
-      'Oxigeno',
-    ];
-    const filteredUsers = Object.keys(dataInformacionTable)
-      .filter((key) => event.Area.includes(key))
-      .reduce((obj, key) => {
-        debugger;
-        // obj[key] = users[key];
-        return obj;
-      }, {});
-    return [];
+  viewDetailsTable(path: string) {
+    this.tableDetails = this.valores.filter(
+      (value) => value.Area.name === path
+    );
+    this.arrayKeys.forEach((value) => {
+      if (value.path === path) {
+        value.visible = !value.visible;
+      }
+    });
   }
 }

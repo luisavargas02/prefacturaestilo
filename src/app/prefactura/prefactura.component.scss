@@ -1,3 +1,52 @@
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-expand {
+  display: flex;
+  flex-direction: column;
+  &__box {
+    @include flex;
+    justify-content: flex-start;
+    flex: 1;
+  }
+  &__amount {
+    flex: 2;
+    @include flex;
+    justify-content: flex-end;
+  }
+  &__box {
+    @include flex;
+  }
+}
+
+.contenedor-tabla {
+}
+
+i {
+  cursor: pointer;
+}
+
+.contenedor-box {
+  @include flex;
+  &__row {
+    @include flex;
+    cursor: pointer;
+    flex: 1;
+  }
+  &__logo {
+    @include flex;
+
+    flex: 1;
+  }
+  &__label {
+    @include flex;
+    flex: 1;
+  }
+}
+
 .Contenedor {
   width: 961px;
   max-width: 970px;

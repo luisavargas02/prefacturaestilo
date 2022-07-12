@@ -4,6 +4,9 @@ export interface IdataInformacion<T> {
 
 export interface Area {
   name: string;
+  color: string;
+  colorletras: string;
+  icon: string;
 }
 
 export interface IarregloInformacion {
