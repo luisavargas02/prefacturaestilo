@@ -6,7 +6,7 @@
           "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
           "cantidad": 2,
           "valorunitario": 235.125,
-          "valortotal": 470.252,
+          "valortotal": 470.254,
           "Area": {
             "name": "Estancia",
             "icon": "fa-solid fa-user-clock ",
@@ -16,11 +16,24 @@
           }
        },
        {
+        "codigo":1300,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 2,
+         "valorunitario": 235.125,
+         "valortotal": 470.258,
+         "Area": {
+           "name": "Examenes",
+           "icon": "fa-solid fa-clipboard-list",
+           "color": "#9048D9",
+           "colorletras": "#48236B"
+         }
+      },
+       {
          "codigo":1200,
           "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
           "cantidad": 2,
           "valorunitario": 235.125,
-          "valortotal": 470.252,
+          "valortotal": 470.256,
           "Area": {
             "name": "Oxigeno",
             "icon": "fa-solid fa-soap",
@@ -29,24 +42,11 @@
           }
        },
        {
-         "codigo":1300,
-          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
-          "cantidad": 2,
-          "valorunitario": 235.125,
-          "valortotal": 470.252,
-          "Area": {
-            "name": "Examenes",
-            "icon": "fa-solid fa-clipboard-list",
-            "color": "#9048D9",
-            "colorletras": "#48236B"
-          }
-       },
-       {
          "codigo":1400,
           "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
           "cantidad": 2,
           "valorunitario": 235.125,
-          "valortotal": 470.252,
+          "valortotal": 470.259,
           "Area": {
             "name":"Medicamentos",
             "icon": "fa-solid fa-pills",
@@ -55,11 +55,24 @@
           }
        },
        {
+        "codigo":1400,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 2,
+         "valorunitario": 235.125,
+         "valortotal": 541.217,
+         "Area": {
+           "name":"Medicamentos",
+           "icon": "fa-solid fa-pills",
+           "color": "#D98248",
+           "colorletras":"#6B4023"
+         }
+      },
+       {
          "codigo":1500,
           "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
           "cantidad": 2,
           "valorunitario": 235.125,
-          "valortotal": 470.252,
+          "valortotal": 470.255,
           "Area": {
             "name":"Insumos",
             "icon": "fa-solid fa-boxes-packing",
@@ -83,7 +96,7 @@
          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
          "cantidad": 3,
          "valorunitario": 235.125,
-         "valortotal": 470.252,
+         "valortotal": 470.257,
          "Area": {
            "name": "Estancia",
            "icon": "fa-solid fa-user-clock"
@@ -94,7 +107,7 @@
          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
          "cantidad": 2,
          "valorunitario": 235.125,
-         "valortotal": 470.252,
+         "valortotal": 470.256,
          "Area": {
            "name": "Oxigeno",
            "icon": "fa-solid fa-soap"
@@ -116,7 +129,7 @@
          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
          "cantidad": 2,
          "valorunitario": 235.125,
-         "valortotal": 470.252,
+         "valortotal": 470.251,
          "Area": {
            "name":"Medicamentos",
            "icon": "fa-solid fa-pills"
@@ -127,7 +140,7 @@
          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
          "cantidad": 2,
          "valorunitario": 235.125,
-         "valortotal": 470.252,
+         "valortotal": 470.253,
          "Area": {
            "name":"Insumos",
            "icon": "fa-solid fa-boxes-packing"
@@ -138,10 +151,21 @@
          "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
          "cantidad": 2,
          "valorunitario": 235.125,
-         "valortotal": 470.252,
+         "valortotal": 470.257,
          "Area": {
            "name":"Insumos",
            "icon": "fa-solid fa-boxes-packing"
+         }
+      },
+      {
+        "codigo":1521,
+         "Descripcion":"INTERNACION EN UNIDAD DE CUIDADOS INTERMEDIOS ADULTO",
+         "cantidad": 4,
+         "valorunitario": 235.125,
+         "valortotal": 940.512,
+         "Area": {
+           "name":"Estancia",
+           "icon": "fa-solid fa-user-clock"
          }
       }
       ]

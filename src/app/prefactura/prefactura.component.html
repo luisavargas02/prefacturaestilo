@@ -11,7 +11,7 @@
   (onPage)="ver($event)"
   [showNavigators]="true"
 >
-  <ng-template pTemplate="item" let-i="index">
+  <ng-template pTemplate="item" let-i="rowIndex">
     <div class="Contenedor" *ngIf="openandclose">
       <app-barras-estadisticas
         *ngIf="page"
@@ -31,20 +31,11 @@
           *ngIf="!page"
         >
           <ng-template pTemplate="header">
-            <tr>
-              <th colspan="1" class="header__codigo header__item">Codigo</th>
-              <th colspan="2" class="header__item">Descripción</th>
-              <th colspan="1" class="header__item">Cantidad</th>
-              <th colspan="1" class="header__item">Valor Unitario</th>
-              <th colspan="2" class="header__vaalorTotal header__item">
-                Valor Total
-              </th>
-            </tr>
+            <tr></tr>
           </ng-template>
           <ng-template
             pTemplate="groupheader"
             let-valor
-            let-rowIndex="rowIndex"
             let-expanded="expanded"
           >
             <tr>
@@ -77,10 +68,20 @@
                   <small
                     [style.color]="valor.Area.colorletras"
                     class="contenedorprecio__totales"
-                    >${{ valor.valortotal }}</small
-                  >
+                    >$
+                    {{ sumatoriasObject[valor.Area.name].toFixed(3) }}
+                  </small>
                 </div>
               </td>
+            </tr>
+            <tr *ngIf="expanded">
+              <th colspan="1" class="header__codigo header__item">Codigo</th>
+              <th colspan="2" class="header__item">Descripción</th>
+              <th colspan="1" class="header__item">Cantidad</th>
+              <th colspan="1" class="header__item">Valor Unitario</th>
+              <th colspan="2" class="header__vaalorTotal header__item">
+                Valor Total
+              </th>
             </tr>
           </ng-template>
           <ng-template pTemplate="groupfooter" let-valor>
@@ -89,32 +90,38 @@
               <td></td>
             </tr>
           </ng-template>
-          <ng-template pTemplate="rowexpansion" let-valor>
+          <ng-template pTemplate="rowexpansion" let-valor let-index="rowIndex">
             <tr>
-              <td colspan="1" class="tdespacio">
+              <td colspan="1" class="tdespacio" style="text-align: center">
                 <span class="image-text">{{ valor.codigo }}</span>
               </td>
-              <td colspan="2" class="tdespacio">
+              <td colspan="2" class="tdespacio" style="text-align: center">
                 {{ valor.Descripcion }}
               </td>
-              <td colspan="1" class="tdespacio">
+              <td colspan="1" class="tdespacio" style="text-align: center">
                 {{ valor.cantidad }}
               </td>
-              <td colspan="1" class="tdespacio">
+              <td colspan="1" class="tdespacio" style="text-align: center">
                 <span>{{ valor?.valorunitario }}</span>
               </td>
-              <td colspan="2" class="tdespacio">
+              <td colspan="2" class="tdespacio" style="text-align: center">
                 {{ valor?.valortotal }}
               </td>
             </tr>
           </ng-template>
         </p-table>
         <div class="contenedor__valortotal" *ngIf="!page">
-          <label class="valortotal__title"> Valor Total:</label>
-          <span class="valortotal__number"
-            >$2.351.260
-            <!-- {{ calculatevalorTotal(valor?.area?.name) }} -->
-          </span>
+          <div class="contenedortitleprecio">
+            <label class="valortotal__title"> Valor Total:</label>
+          </div>
+          <div
+            class="contenedorprecio"
+            style="width: 29%; background-color: #68a2ff; margin-right: -6px"
+          >
+            <small class="valortotal__number"
+              >${{ sumatoriaTotal.toFixed(3) }}
+            </small>
+          </div>
         </div>
       </div>
     </div>

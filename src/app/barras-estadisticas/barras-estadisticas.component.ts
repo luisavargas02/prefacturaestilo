@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ServicediseñoService } from '../service/servicediseño.service';
+import { ServicePrefacturaService } from '../service/prefactura.service';
 
 @Component({
   selector: 'app-barras-estadisticas',
@@ -17,32 +17,22 @@ export class BarrasEstadisticasComponent implements OnInit {
   multiAxisOptions: any;
   dataDoughnut: any;
 
-  constructor(private servicediseñoprefactura: ServicediseñoService) {}
+  constructor(private serviceprefacturaService: ServicePrefacturaService) {}
 
   ngOnInit() {
+    this.serviceprefacturaService.getDataInformacion().subscribe((data) => {
+      console.log('alejandra', data);
+    });
     this.DataPrefactura = {
-      labels: ['Estancia', 'Oxigeno', 'Examenes', 'Medicamentos', 'Insumos'],
+      labels: ['Auditoria Facturacion', 'Unidad de Cuidados Intencivos'],
       datasets: [
         {
-          data: [300, 50, 100, 200, 100],
-          backgroundColor: [
-            '#42A5F5',
-            '#66BB6A',
-            '#FFA726',
-            '#FE0000',
-            '#EEC200',
-          ],
-          hoverBackgroundColor: [
-            '#64B5F6',
-            '#81C784',
-            '#FFB74D',
-            '#EEE300',
-            '#00EEBF',
-          ],
+          data: [300, 100],
+          backgroundColor: ['#42A5F5', '#66BB6A'],
+          hoverBackgroundColor: ['#64B5F6', '#81C784'],
         },
       ],
     };
-
     this.datacombo = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
@@ -70,7 +60,6 @@ export class BarrasEstadisticasComponent implements OnInit {
         },
       ],
     };
-
     this.multiAxisData = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
@@ -96,7 +85,6 @@ export class BarrasEstadisticasComponent implements OnInit {
         },
       ],
     };
-
     this.multiAxisOptions = {
       plugins: {
         legend: {
@@ -147,7 +135,6 @@ export class BarrasEstadisticasComponent implements OnInit {
         },
       },
     };
-
     this.dataDoughnut = {
       labels: ['A', 'B', 'C'],
       datasets: [

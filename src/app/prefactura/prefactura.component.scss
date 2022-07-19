@@ -91,6 +91,9 @@
       background: #5e87f7;
     }
   }
+  .p-datatable-tfoot tr > td {
+    background-color: #1100fc;
+  }
 }
 
 .product-item {
@@ -128,9 +131,7 @@
   margin-left: 6px;
   text-align: center;
 }
-.tdespacio {
-  text-align: end;
-}
+
 .contenedorprecio {
   padding: 6px;
   border-radius: 7px;
@@ -138,4 +139,10 @@
 }
 .contenedorprecio__totales {
   font-weight: bold;
+  font-size: 14px;
+}
+.valortotal__number {
+  color: #474f56;
+  font-weight: bold;
+  font-size: 14px;
 }

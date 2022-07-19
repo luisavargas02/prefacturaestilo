@@ -9,7 +9,7 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class ServicediseñoService {
+export class ServicePrefacturaService {
   constructor(private httpclient: HttpClient) {}
   private ApiUrl: string = 'assets/customers-medium.json';
 
