@@ -16,6 +16,7 @@ export class PrefacturaComponent implements OnInit {
   sumatoriaTotal: number = 0;
   sumarvalores: number[] = [];
   sumatoriasObject: any = {};
+  cambiodemodulo: boolean = false
 
   constructor(private serviceprefacturaService: ServicePrefacturaService) {}
 
@@ -41,6 +42,10 @@ export class PrefacturaComponent implements OnInit {
     });
     this.openandclose = true;
     console.log('hh', this.openandclose);
+  }
+
+  cambiardemodulo(){
+    this.cambiodemodulo = true
   }
 
   sumatorias() {

@@ -1,3 +1,9 @@
+.div__botones{
+  display: flex;
+  justify-content: space-between ;
+}
+
+
 .Contenedor {
   width: 961px;
   max-width: 970px;
@@ -94,7 +100,14 @@
   .p-datatable-tfoot tr > td {
     background-color: #1100fc;
   }
+
+  // .p-card .p-card-body {
+  //   padding: 1.25rem;
+  //   height: 15px;
+  // }
 }
+
+
 
 .product-item {
   .product-item-content {
@@ -119,7 +132,7 @@
   background-color: #f4f6ff;
 }
 .valortotal__title {
-  color: black;
+  color: #495057;
   font-weight: bold;
 }
 .contenedor__icono {
@@ -145,4 +158,33 @@
   color: #474f56;
   font-weight: bold;
   font-size: 14px;
+}
+.valortotal__precio{
+  display: flex;
+  width: 29%;
+  margin: auto 0;
+  align-items: flex-start;
+}
+.contenedor__etiquetasestadisticas{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.etiquetasestadisticas__ab{
+  width: 100%;
+}
+.div__hc{
+  background-color: #fde9ca;
+  padding: 10px;
+  width: 94%;
+  margin-left: 22px;
+  border-radius: 12px;
+}
+.div__af{
+  background-color: #c4ffcbe6;
+  padding: 10px;
+  width: 94%;
+  margin-left: 5px;
+  border-radius: 12px;
+
 }

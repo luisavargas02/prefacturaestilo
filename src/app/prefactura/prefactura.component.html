@@ -1,7 +1,9 @@
-<div>
+<div class="div__botones">
   <button pButton label="Hola" icon="pi pi-user" (click)="traeInformacion()">
     has click
   </button>
+  
+  <button pButton (click)="cambiardemodulo()">HC / AF </button>
 </div>
 
 <p-carousel
@@ -11,6 +13,7 @@
   (onPage)="ver($event)"
   [showNavigators]="true"
 >
+
   <ng-template pTemplate="item" let-i="rowIndex">
     <div class="Contenedor" *ngIf="openandclose">
       <app-barras-estadisticas
@@ -111,8 +114,8 @@
           </ng-template>
         </p-table>
         <div class="contenedor__valortotal" *ngIf="!page">
-          <div class="contenedortitleprecio">
-            <label class="valortotal__title"> Valor Total:</label>
+          <div class="valortotal__precio">
+            <label class="valortotal__title"> Valor Total : </label>
           </div>
           <div
             class="contenedorprecio"
@@ -122,6 +125,14 @@
               >${{ sumatoriaTotal.toFixed(3) }}
             </small>
           </div>
+        </div>
+      </div>
+      <div class="contenedor__etiquetasestadisticas" *ngIf="cambiodemodulo">
+        <div class="etiquetasestadisticas__ab">
+          <div class="div__hc">$7.124.789</div>
+        </div>
+        <div class="etiquetasestadisticas__ab">
+          <div class="div__af">$20.248.878</div>
         </div>
       </div>
     </div>
