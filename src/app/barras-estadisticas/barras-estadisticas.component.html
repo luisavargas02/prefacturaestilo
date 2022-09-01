@@ -1,25 +1,15 @@
 <div class="contenedorgraficas">
-  <div class="informacionbarras" style="width: 34%">
-    <p-chart type="pie" [data]="DataPrefactura"></p-chart>
-  </div>
-
   <div class="informacionbarras" style="width: 45%">
+    <h4 class="informacionbarras__title">Facturacion Mes Día</h4>
     <p-chart type="bar" [data]="datacombo" [options]="chartOptions"></p-chart>
   </div>
 
-  <div class="informacionbarras" style="width: 45%">
-    <p-chart
-      type="bar"
-      [data]="multiAxisData"
-      [options]="multiAxisOptions"
-    ></p-chart>
-  </div>
-
   <div class="informacionbarras" style="width: 34%">
-    <p-chart
-      type="doughnut"
-      [data]="dataDoughnut"
-      [options]="chartOptions"
-    ></p-chart>
+    <h4 class="informacionbarras__title">Facturacion Mes (%)</h4>
+    <p-chart type="pie" [data]="DataPrefactura" [options]="chartOptions"></p-chart>
   </div>
 </div>
+
+
+<!-- <h4>Facturacion Mes</h4> -->
+<!-- <h4 class="informacionbarras__title">Metas Diarias</h4> -->

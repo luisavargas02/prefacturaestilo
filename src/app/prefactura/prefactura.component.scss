@@ -101,10 +101,10 @@
     background-color: #1100fc;
   }
 
-  // .p-card .p-card-body {
-  //   padding: 1.25rem;
-  //   height: 15px;
-  // }
+  .p-card .p-card-body {
+    padding: 1.25rem;
+    height: 15px;
+  }
 }
 
 
@@ -173,12 +173,13 @@
 .etiquetasestadisticas__ab{
   width: 100%;
 }
-.div__hc{
-  background-color: #fde9ca;
+.div__ad{
+  background-color: #c4ffcbe6;
   padding: 10px;
   width: 94%;
   margin-left: 22px;
   border-radius: 12px;
+  text-align: center;
 }
 .div__af{
   background-color: #c4ffcbe6;
@@ -186,5 +187,6 @@
   width: 94%;
   margin-left: 5px;
   border-radius: 12px;
+  text-align: center;
 
 }

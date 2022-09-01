@@ -28,8 +28,6 @@ export class PrefacturaComponent implements OnInit {
         const respSumatoria = this.sumatorias();
         this.sumatoriasObject = respSumatoria.sumatoria2;
         this.sumatoriaTotal = respSumatoria.sumariaTotal;
-        console.log('ku', resp);
-        console.log(this.valores);
       });
     this.traeInformacion();
   }
@@ -38,10 +36,8 @@ export class PrefacturaComponent implements OnInit {
     this.serviceprefacturaService.getDataInformacion().subscribe((resp) => {
       this.valores = resp;
       this.carrouselPages = [1, 1];
-      console.log('holis', this.valores);
     });
     this.openandclose = true;
-    console.log('hh', this.openandclose);
   }
 
   cambiardemodulo(){
@@ -67,8 +63,6 @@ export class PrefacturaComponent implements OnInit {
     Object.values(sumatoria2).forEach((totalPorArea) => {
       sumariaTotal += Number(totalPorArea);
     });
-    console.log('sumatoria2: ', sumatoria2);
-    console.log(sumariaTotal);
     return { sumatoria2, sumariaTotal };
   }
 

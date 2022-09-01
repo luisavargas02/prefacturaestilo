@@ -19,7 +19,7 @@
       <app-barras-estadisticas
         *ngIf="page"
         class="contenedor__barras"
-      ></app-barras-estadisticas>
+        ></app-barras-estadisticas>
       <div class="contenedor__tabla">
         <p-table
           responsiveLayout="scroll"
@@ -128,11 +128,11 @@
         </div>
       </div>
       <div class="contenedor__etiquetasestadisticas" *ngIf="cambiodemodulo">
-        <div class="etiquetasestadisticas__ab">
-          <div class="div__hc">$7.124.789</div>
+        <div class="etiquetasestadisticas__ab"*ngIf="!page">
+          <div class="div__ad">diferencia (%) 210%</div>
         </div>
-        <div class="etiquetasestadisticas__ab">
-          <div class="div__af">$20.248.878</div>
+        <div class="etiquetasestadisticas__ab"*ngIf="!page">
+          <div class="div__af"> diferencia ($) $20.248.878</div>
         </div>
       </div>
     </div>
